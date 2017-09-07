@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  seed_docker_django_img:
+    restart: unless-stopped
+    build: .
+    container_name: seed_docker_django
+    volumes:
+      - './code:/code'
+    ports:
+      - '8000:8000'
